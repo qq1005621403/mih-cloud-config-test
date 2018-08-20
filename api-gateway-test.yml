@@ -21,11 +21,6 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 360000
-kingdeehit: 
-  cloud: 
-    open: 
-      tenantId: "00331"            
-      token-enabled: false
 zuul: 
   host:
     socket-timeout-millis: 120000
