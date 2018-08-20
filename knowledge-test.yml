@@ -1,0 +1,55 @@
+server:
+  port: 5210
+logging: 
+  config: classpath:log4j2-production.yml
+spring: 
+  sleuth: 
+    sampler: 
+      percentage: 1
+  cloud: 
+    stream: 
+      kafka: 
+        binder: 
+          brokers: master1.bigdata,master2.bigdata,master3.bigdata
+          defaultBrokerPort: 9872
+          zkNodes: master1.bigdata,master2.bigdata,master3.bigdata
+          defaultZkPort: 12181
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy:  org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  cache:
+    type: REDIS
+  redis: 
+    database: 0
+    host: 10.104.237.66
+    port: 6379
+    password: kingdeehit$2017 
+    jedis: 
+      pool: 
+        max-wait: -1
+        max-idle: 20
+        min-idle: 0
+    timeout: 2000
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.66.121.198:3306/OP?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8
+    username: root
+    password: kingdee@8349
+    druid: 
+      initialSize: 10
+      minIdle: 5
+      maxActive: 100
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMills: 300000
+      testOnBorrow: false
+      testWhileIdle: true
+      testOnReutrn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,log4j
+      useGlobalDataSourceStat: true
