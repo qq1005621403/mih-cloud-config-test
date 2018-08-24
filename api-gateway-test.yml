@@ -71,3 +71,5 @@ spring:
 kingdeehit: 
   security: 
     allowedOrigin: "*"
+swagger: 
+  enabled: false
