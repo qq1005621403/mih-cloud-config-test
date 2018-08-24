@@ -68,6 +68,5 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20
       filters: stat,wall,log4j
       useGlobalDataSourceStat: true
-kingdeehit: 
-  security: 
-    allowedOrigin: "*"
+swagger: 
+  enabled: false
