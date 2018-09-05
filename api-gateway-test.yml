@@ -1,4 +1,6 @@
-ribbon:
+server: 
+  port: 5400
+ribbon: 
   eureka:
     enabled: true
   ReadTimeout: 120000
