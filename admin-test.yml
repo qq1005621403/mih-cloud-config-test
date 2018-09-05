@@ -1,14 +1,4 @@
-logging: 
-  config: classpath:log4j2-production.yml
 spring: 
-  cloud: 
-    stream: 
-      kafka: 
-        binder: 
-          brokers: master1.bigdata,master2.bigdata,master3.bigdata
-          defaultBrokerPort: 9872
-          zkNodes: master1.bigdata,master2.bigdata,master3.bigdata
-          defaultZkPort: 12181
   redis: 
     database: 0
     host: 10.104.237.66

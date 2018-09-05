@@ -1,0 +1,66 @@
+logging: 
+  config: classpath:log4j2-production.yml
+eureka: 
+  instance: 
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    preferIpAddress: true
+  client:
+    registry-fetch-interval-seconds: 5    
+hystrix:
+  stream: 
+    maxConcurrentConnections: 10
+management: 
+  endpoint: 
+    health: 
+      show-details: ALWAYS
+  endpoints:
+    web: 
+      exposure:
+        include: "*"
+server: 
+  tomcat: 
+    accept-count: 10 
+    max-connections: 10 # Maximum number of connections that the server accepts and processes at any given time.
+    max-threads: 10 # Maximum number of worker threads.
+    min-spare-threads: 5 # Minimum number of worker threads.
+spring: 
+  cloud: 
+    stream: 
+      kafka: 
+        binder: 
+          brokers: master1.bigdata
+  sleuth:
+    sampler:
+      probability: 1.0
+  kafka:
+    bootstrap-servers:
+    - master1.bigdata:9092
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy:  org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  cache:
+    type: REDIS
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+    serialization:
+      write-dates-as-timestamps: false
+      write-null-map-values: false
+      write-empty-json-arrays: false
+    deserialization:
+      accept-single-value-as-array: true
+      accept-empty-array-as-null-object: true
+  redis: 
+    database: 0
+    host: 10.104.237.66
+    port: 6379
+    password: "{cipher}AQBSQDWwxoE1MOTovH4bgd6HwPk3m0wMaN0Btc0Vc4Pl/K9NzPXOzl88+JcmnkZAGQYwJ1kLQW0RV41r7a0n33VmwBXXpwIM/3Z3zrERNChRJtAV6o92yjN9HaY2iaSk6fIBTUSbTWiDyLFyDcTQqLTmueA/ZSNWW4bXTQIscjkvfAyoxqOBFXa4nQ3DNYp1gz5nmw7fCQewnj19mENZKmEhy6Cqi9264EMEIFZmNAKpcyELjoDFvCZxGMtK1T1FhVwinb5Q1Eg8vdFZfHKAZzkBJfoySpSt8QPE0rToZxbrzeU3TOX4lOScb9HcXKtexy0nX440OJjEU+1ec6V2yUF3vTvj+TijfXEtWqBLyroc+aR2BG1lVX4nUMWI5yRYhow="
+    jedis: 
+      pool: 
+        max-wait: -1
+        max-idle: 20
+        min-idle: 0
+    timeout: 2000
