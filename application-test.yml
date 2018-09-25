@@ -67,3 +67,11 @@ spring:
 cloudhub: 
   access-token-url: "http://111.230.166.38/mwp/token/api/getAccessToken"
   api-url: "http://111.230.166.38/mwp"
+logging:
+  level: 
+    org.apache.kafka: info
+    org.apache.flume: info
+    com.netflix.discovery: info
+    com.kingdeehit.cloud.social.wechat.api: debug
+    org.springframework.kafka: info
+    org.apache.http: info
