@@ -65,8 +65,7 @@ spring:
 cloudhub: 
   access-token-url: "http://111.230.166.38/mwp/token/api/getAccessToken"
   api-url: "http://111.230.166.38/mwp"
-logging: 
-  config: classpath:log4j2-production.yml
+logging:
   level: 
     org.apache.kafka: info
     org.apache.flume: info
