@@ -63,8 +63,8 @@ spring:
         min-idle: 0
     timeout: 2000
 cloudhub: 
-  access-token-url: "http://111.230.166.38/mwp/token/api/getAccessToken"
-  api-url: "http://111.230.166.38/mwp"
+  access-token-url: "http://10.104.237.66/mwp/token/api/getAccessToken"
+  api-url: "http://10.104.237.66/mwp"
 logging:
   config: classpath:log4j2-production.yml
   level: 
