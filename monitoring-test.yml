@@ -22,8 +22,8 @@ spring:
   #open-falcon的接口地址和登录的用户的账号和密码
 falcon:
     user:
-      name: root #open-falcon账户名字，
-      sig: 81d05084b57111e7bb445254009494f2
+      name: "{cipher}AQB/ALCxuFr24u98W++I4qv/zoWGqjByyx3CQzrFAI52CAuwdPpC0TFIYnulVR8j194Gdr3sH5HIiCsHKH1DhV+Y9/85TImll2kQJ6UEwaWUB4PQbuWHuOxEA9BAhKvsWuGhsDaMdM4+WRFucrLr7i0jH2D5PxUcrG4rQHg5HAeXU0YuKgcrkYAwBtxXaveF+lkx81mBz47OHys5kuOpXhuVMYK03l2zH9dlNZ9JQq50Qru3yDkgK3KmagG3Am3DsQrNfZckmL7c3xHZ1CNbrKHkC9NG1E0klTha6Ykg1zmMraefxFdntnzmkMDLS+hLWV1y40aHoYT4th2oRnk4ai/wI879l3ByVF8vM6XjiIbiKZtvJ+8tDaU99meiYnEJ8bM=" #open-falcon账户名字，
+      sig: "{cipher}AQBeVc4En/WTWLVCEetrSF1djvD9wEpGqna1yETosQrXu0TqT/jZ23XqEa07iXk3GO7YMqgWC8BF0IlPapizzHz+MbJtBLMkO27437FZ5cWprl5jH55BPcxEFYbYYZ//R2EoEaETjfjh3hc1z2mT/O1Z0j/xUOJFJp/ouPIXB7lhsKfurSu56CF+RrqRn+ppdEHmXZ7SHnmlxmypYjnY16+ky8/+t9xU6ZZ3YXpWYUNkf9A2HHXozdmC8U893vTlNfsi4VC4qU3b7MogmHSykIn+qcv4KgATwZe7fgTqvbaijO3zouIl5mi1kaCb9q5eFNIY8gnzQ3+WYabscDT16sJOIqNvxjkg4EfvCmjVQejtkshs9JINRKGe3Ydy0Epw2SF/RWe0U2TBCjuGqITEvpU+KvOCF1HfPw5XNfLT0pCZwQ=="
     pushUrl: http://10.104.237.66:1988/v1/push #推送自定义消息
     api: http://10.104.237.66:18080/api/v1/
     query:
