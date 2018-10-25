@@ -19,3 +19,11 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20
       filters: stat,wall,log4j
       useGlobalDataSourceStat: true
+  data: 
+    mongodb: 
+      authentication-database: admin
+      database: ehr
+      host: 10.104.158.54
+      password: "{cipher}AQBkivHFIs82X19e1qASEPTlZF7re9yJZw2IfgVJHSLWeOVF76JXxIJX6GmDBcoAbwv2k4AITGuYXs8C3CCiZVXPqmC8BMgmeS7VFYPNbtMxjPxqk+n29p5RqUt3q0VtUW2biCtJyVYoXEgGrZmlIZ2RKH6svK7Bv6MC0uH8b7IePWAhwmOPCqqYqf6SfRV5PscK/p6D1V7ruv/VVxS2HsvwaMHwdUKl0sM4nrfA0cM0EHg6XMCXyCDlR1Q6PmVNDVbEDrwgDXD3FuV4mMR8POCf2xUHB+nObF2qFagHmftAaqFQhOJ6t9a5FmnslQw8+HGJJ5dGH8nvH8TDFcqRDZG8tENDgbA0lMJ8tyJ/HfmYjLRRi3zs9Q+HIS6VHuM6HoWQXhbQP+myJWiCcV4QqnyO"
+      username: "{cipher}AQCNcB26tYGlE8fptFH/7NNkJYoNpxfUkdqsECR4bsT/LIKV++6AUPta1FEta1MWX2MZix+r/K1HKu3S27t6Wq/JibHoku6xb4wh1EbgKDxlx4QpjLuZOWng3RgrK7Wg8GOHBgLdbW47ASP1a/32DoLs3058YmGTGlmQomDuhprs/JDbSu6FO6/dHKbsQ+ySf7XOoFQ36QI99dYOQihSfw4MWuD9dfhZtyW+zSGn+VX0jB32aLPWVrd7Jk8XxISdpEEH2DtbZB1rVFH2wwu5nmZPy2cGLyrVDc+xlNQPQm/ADGEGHHscJ2RDQuSw1JTmOz4t2N8RzoUwePieIAVjznTgP0OXOofmgFd+9O9t1eo8jw4RV8Ide5LCqFNwbQoyXu4="
+      port: 27017
