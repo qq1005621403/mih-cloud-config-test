@@ -19,3 +19,5 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20
       filters: stat,wall,log4j
       useGlobalDataSourceStat: true
+logging:
+  config: classpath:log4j2-production.yml
