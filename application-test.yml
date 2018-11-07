@@ -46,13 +46,14 @@ spring:
     stream: 
       kafka: 
         binder: 
-          brokers: master1.bigdata
+          brokers: 10.104.53.245
+          zkNodes: 10.104.53.245
   sleuth:
     sampler:
       probability: 1.0
   kafka:
     bootstrap-servers:
-    - master1.bigdata:9092
+    - 10.104.53.245:9092
   jpa:
     show-sql: true
     hibernate:
