@@ -47,7 +47,6 @@ spring:
       kafka: 
         binder: 
           brokers: 10.104.53.245
-          zkNodes: 10.104.53.245
   sleuth:
     sampler:
       probability: 1.0
