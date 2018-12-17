@@ -41,3 +41,6 @@ spring:
       useGlobalDataSourceStat: true
 swagger: 
   enabled: false
+kingdeehit: 
+  security: 
+    allowedOrigin: "*"
