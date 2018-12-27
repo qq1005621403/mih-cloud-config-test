@@ -78,11 +78,11 @@ spring:
           group:  ${spring.application.name}:pay.notify.in
         refund-notify-out: 
           binder: pay-notify
-          destination: pay.notify
+          destination: refund.notify
           group:  ${spring.application.name}:refund.notify.out
         refund-notify-in: 
           binder: pay-notify
-          destination: pay.notify
+          destination: refund.notify
           group:  ${spring.application.name}:refund.notify.in
       binders: 
         cloud-bus: 
@@ -93,7 +93,7 @@ spring:
                 stream:
                   kafka:
                     binder:
-                      brokers: 10.104.53.245 
+                      brokers: 10.66.203.101 
         social-message:   
           type: kafka
           environment:
@@ -102,7 +102,7 @@ spring:
                 stream:
                   kafka:
                     binder:
-                      brokers: 10.104.53.245
+                      brokers: 10.66.203.101
         pay-notify:   
           type: kafka
           environment:
@@ -111,7 +111,7 @@ spring:
                 stream:
                   kafka:
                     binder:
-                      brokers: 10.104.53.245
+                      brokers: 10.66.203.101
     bus: 
       trace: 
         enabled: true
@@ -120,7 +120,7 @@ spring:
       probability: 1.0
   kafka:
     bootstrap-servers:
-    - 10.104.53.245:9092
+    - 10.66.203.101:9092
   jpa:
     show-sql: true
     hibernate:
