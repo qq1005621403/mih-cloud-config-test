@@ -160,6 +160,8 @@ kingdeehit:
   host: "https://test3.mhealth100.com"
   payment-gateway: 
     callback-url: "/patient/base/#/result"
+mydoctor:
+  url: https://test3.mhealth100.com/ip-healthmanager-mobile-web/external
 logging:
   config: classpath:log4j2-test.yml
   level: 
