@@ -173,3 +173,4 @@ logging:
     org.springframework.kafka: info
     org.apache.http: info
     io.lettuce: info
+    kingdeehit.Cloud.API: info
