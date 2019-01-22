@@ -53,53 +53,77 @@ spring:
           binder: cloud-bus
           group: ${spring.application.name}@${spring.cloud.client.ip-address}:${server.port}
         social-message-receive-out: 
-          consumer: 
-            max-attempts: 0
           binder: social-message
           destination: social.message.receive
           group:  ${spring.application.name}:social.message.receive.out
-        social-message-receive-in: 
           consumer: 
-            max-attempts: 0
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        social-message-receive-in: 
           binder: social-message
           destination: social.message.receive
           group:  ${spring.application.name}:social.message.receive.in
-        social-message-send-complete-out:
           consumer: 
-            max-attempts: 0 
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        social-message-send-complete-out:
           binder: social-message
           destination: social.message.send
           group:  ${spring.application.name}:social.message.send.complete.out
-        social-message-send-complete-in: 
           consumer: 
-            max-attempts: 0
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        social-message-send-complete-in: 
           binder: social-message
           destination: social.message.send
           group:  ${spring.application.name}:social.message.send.complete.in
-        pay-notify-out: 
           consumer: 
-            max-attempts: 0
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        pay-notify-out: 
           binder: pay-notify
           destination: pay.notify
           group:  ${spring.application.name}:pay.notify.out
-        pay-notify-in: 
           consumer: 
-            max-attempts: 0
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        pay-notify-in: 
           binder: pay-notify
           destination: pay.notify
           group:  ${spring.application.name}:pay.notify.in
-        refund-notify-out: 
           consumer: 
-            max-attempts: 0
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        refund-notify-out: 
           binder: pay-notify
           destination: refund.notify
           group:  ${spring.application.name}:refund.notify.out
-        refund-notify-in: 
           consumer: 
-            max-attempts: 0
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
+        refund-notify-in: 
           binder: pay-notify
           destination: refund.notify
           group:  ${spring.application.name}:refund.notify.in
+          consumer: 
+            max-attempts: 1
+            headerMode: embeddedHeaders
+          producer: 
+            headerMode: embeddedHeaders
       binders: 
         cloud-bus: 
           type: kafka
