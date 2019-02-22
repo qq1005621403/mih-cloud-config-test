@@ -18,7 +18,12 @@ zuul:
   host:
     socket-timeout-millis: 120000
     connect-timeout-millis: 30000
-spring: 
+spring:  
+  servlet: 
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+      location: /usr/local/tmp 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
