@@ -20,6 +20,15 @@ hystrix:
           enabled: false
 feign: 
   client: 
+    pass: 
+      headers:
+        - token
+        - tenantid
+        - userid
+        - openid
+        - scope
+        - providerid
+        - clientid
     config: 
       default: 
         connectTimeout: 10000
